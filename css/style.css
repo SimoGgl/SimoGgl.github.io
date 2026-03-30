@@ -1,0 +1,469 @@
+/* ================================================
+   RESET & VARIABILI GLOBALI
+   Azzera gli stili di default del browser e definisce
+   i colori e font usati in tutto il sito.
+   Per cambiare il colore accent basta modificare --accent.
+   ================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:         #0d1117;
+  --surface:    #161b22;
+  --border:     #30363d;
+  --text:       #e6edf3;
+  --text-muted: #8b949e;
+  --accent:     #58a6ff;
+
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: system-ui, -apple-system, sans-serif;
+
+  --max-width: 900px;
+  --radius: 8px;
+}
+
+html {
+  /* scroll fluido quando si clicca un link della navbar */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================
+   HERO
+   La prima sezione che si vede aprendo il sito.
+   hero-container centra il contenuto e separa
+   testo e link su due lati opposti.
+   ================================================ */
+
+#hero {
+  padding: 80px 24px 60px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.hero-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.hero-available {
+  /* pallino blu animato prima del testo */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.hero-available::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero-name {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.hero-bio {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.hero-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.hero-links a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  border: 0.5px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ================================================
+   NAVBAR
+   Barra di navigazione fissa in cima alla pagina.
+   Rimane visibile mentre si scrolla grazie a
+   position: sticky e top: 0.
+   nav-container allinea nome, link e bottone lingua
+   su una sola riga.
+   ================================================ */
+
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 24px;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.nav-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ------------------------------------------------
+   BOTTONE CAMBIO LINGUA
+   Mostra EN quando si è in italiano e viceversa.
+   Lo stile è volutamente minimal per non distrarre.
+   ------------------------------------------------ */
+
+.lang-toggle {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 0.5px solid var(--border);
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.lang-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ================================================
+   SEZIONI GENERALI
+   Stile comune a tutte le sezioni (progetti,
+   esperienze, contatti). section-container limita
+   la larghezza e centra il contenuto.
+   ================================================ */
+
+section {
+  padding: 80px 24px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.section-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+
+/* ================================================
+   PROGETTI
+   Griglia a due colonne che si adatta allo spazio.
+   Ogni card ha bordo sottile e sfondo leggermente
+   più chiaro rispetto allo sfondo della pagina.
+   ================================================ */
+
+.progetti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+}
+
+.project-title {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.project-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ------------------------------------------------
+   TAG TECNOLOGIE
+   Piccole pillole con bordo accent per indicare
+   le tecnologie usate in ogni progetto.
+   ------------------------------------------------ */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  background: #0d1f38;
+  border: 0.5px solid #1f6feb;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* ================================================
+   ESPERIENZE — TIMELINE
+   Lista verticale con una linea che collega
+   le voci. Ogni voce ha un pallino sulla linea
+   e il contenuto a destra.
+   ================================================ */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 40px;
+  /* la linea verticale è un bordo sinistro sul contenitore */
+  border-left: 0.5px solid var(--border);
+  padding-left: 32px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* ------------------------------------------------
+   PALLINO SULLA LINEA
+   Posizionato in assoluto a sinistra della timeline,
+   sovrapposto alla linea verticale.
+   ------------------------------------------------ */
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.timeline-role {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* ------------------------------------------------
+   BOTTONE SCARICA CV
+   Stile outline con accent color, simile ai
+   bottoni della navbar e dell'hero.
+   ------------------------------------------------ */
+
+.cv-button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  border: 0.5px solid var(--accent);
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.cv-button:hover {
+  background: #0d1f38;
+  text-decoration: none;
+}
+
+/* ================================================
+   CONTATTI
+   Sezione finale con testo introduttivo e link
+   disposti in fila. Niente form — solo link diretti
+   per mantenere il sito semplice e senza backend.
+   ================================================ */
+
+.contatti-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.contatti-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  border: 0.5px solid var(--border);
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ================================================
+   RESPONSIVE — MOBILE
+   Sotto i 600px il layout si adatta:
+   - L'hero impila testo e link verticalmente
+   - La navbar nasconde i link (rimane solo il nome
+     e il bottone lingua)
+   ================================================ */
+
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-name {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -25px;
+  }
+}

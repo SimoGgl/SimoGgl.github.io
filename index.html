@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simone Giglioli — Network & Automation Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="hero">
+    <div class="hero-container">
+
+      <div class="hero-text">
+        <p class="hero-available" data-i18n="available">disponibile per nuove opportunità</p>
+        <h1 class="hero-name">Simone Giglioli</h1>
+        <h2 class="hero-role" data-i18n="role">Network & Automation Engineer</h2>
+        <p class="hero-bio" data-i18n="bio">
+          Progetto infrastrutture di rete, automatizzo processi ripetitivi
+          e sviluppo strumenti per semplificare la gestione dei sistemi.
+        </p>
+      </div>
+
+      <div class="hero-links">
+        <a href="https://github.com/SimoGgl" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/simone-giglioli" target="_blank">LinkedIn</a>
+      </div>
+
+    </div>
+  </header>
+
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <span class="nav-name">Simone Giglioli</span>
+
+      <ul class="nav-links">
+        <li><a href="#progetti" data-i18n="nav_progetti">Progetti</a></li>
+        <li><a href="#esperienze" data-i18n="nav_esperienze">Esperienze</a></li>
+        <li><a href="#contatti" data-i18n="nav_contatti">Contatti</a></li>
+      </ul>
+
+      <button class="lang-toggle" id="lang-toggle">EN</button>
+
+    </div>
+  </nav>
+
+  <main>
+    <section id="progetti">
+      <div class="section-container">
+
+        <h2 class="section-title" data-i18n="progetti_titolo">Progetti</h2>
+
+        <!--
+          GRIGLIA PROGETTI
+          Per aggiungere un progetto: copia un intero blocco <div class="project-card">
+          e incollalo qui dentro come nuovo elemento della griglia.
+        -->
+        <div class="progetti-grid">
+
+          <!--
+            CARD PROGETTO
+            - project-title: nome del progetto (non tradotto, uguale in IT e EN)
+            - project-desc: descrizione breve — data-i18n="proj1_desc" è il gancio
+              per la traduzione, ricordati di aggiungere la traduzione inglese
+              nel file js/main.js nella sezione "translations"
+            - project-tags: lista di tecnologie usate (non tradotte)
+            - project-links: link al repo GitHub o a una demo
+          -->
+          <div class="project-card">
+            <h3 class="project-title">Network Automation Lab</h3>
+            <p class="project-desc" data-i18n="proj1_desc">
+              Automazione della configurazione di router e switch via Ansible
+              su un ambiente virtuale GNS3.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Ansible</span>
+              <span class="tag">GNS3</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SimoGgl/generatore-documenti-di-rete" target="_blank">GitHub →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">IP Address Management</h3>
+            <p class="project-desc" data-i18n="proj2_desc">
+              Script Python per sincronizzare l'inventario IP con NetBox
+              tramite REST API.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NetBox</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SimoGgl/progetto2" target="_blank">GitHub →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Progetto 3</h3>
+            <p class="project-desc" data-i18n="proj3_desc">
+              Descrizione del tuo terzo progetto.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Tag1</span>
+              <span class="tag">Tag2</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SimoGgl/progetto3" target="_blank">GitHub →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="esperienze">
+  <div class="section-container">
+
+    <h2 class="section-title" data-i18n="esperienze_titolo">Esperienze</h2>
+
+    <!--
+      TIMELINE ESPERIENZE
+      Per aggiungere una voce: copia un intero blocco <div class="timeline-item">
+      e incollalo qui dentro. L'ordine è cronologico inverso: il più recente in cima.
+    -->
+    <div class="timeline">
+
+      <!--
+        VOCE TIMELINE
+        - timeline-date: periodo (non tradotto)
+        - timeline-role: ruolo lavorativo (non tradotto)
+        - timeline-company: nome azienda (non tradotto)
+        - timeline-desc: descrizione attività — data-i18n è il gancio per la
+          traduzione, ricordati di aggiungere la versione inglese in js/main.js
+      -->
+      <div class="timeline-item">
+        <div class="timeline-date">2024 — oggi</div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Network & Automation Engineer</h3>
+          <span class="timeline-company">Lepida ScpA</span>
+          <p class="timeline-desc" data-i18n="exp1_desc">
+            Descrizione delle tue attività e responsabilità principali.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2023 — 2023</div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Junior Network Engineer</h3>
+          <span class="timeline-company">Logikamente</span>
+          <p class="timeline-desc" data-i18n="exp2_desc">
+            Descrizione delle tue attività e responsabilità principali.
+          </p>
+        </div>
+      </div>
+
+      <!--
+        FORMAZIONE
+        Stessa struttura delle esperienze lavorative.
+        Puoi usare il campo timeline-company per il nome dell'università o istituto.
+      -->
+      <div class="timeline-item">
+        <div class="timeline-date">2022 — 2023</div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Ifts Tecnico informatico per la progettazione di sistemi industriali intelligenti, EQF ^4 livello</h3>
+          <span class="timeline-company">FORMart Ferrara</span>
+          <p class="timeline-desc" data-i18n="exp3_desc">
+            Descrizione del percorso formativo.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+      BOTTONE CV
+      Punta al file assets/cv.pdf — ricordati di caricare il tuo CV in quella cartella.
+      data-i18n="scarica_cv" traduce il testo del bottone.
+    -->
+    <a href="assets/cv.pdf" target="_blank" class="cv-button" data-i18n="scarica_cv">
+      ↓ Scarica CV
+    </a>
+
+  </div>
+</section>
+
+    <section id="contatti">
+  <div class="section-container">
+
+    <h2 class="section-title" data-i18n="contatti_titolo">Contatti</h2>
+
+    <!--
+      TESTO INTRODUTTIVO
+      data-i18n="contatti_desc" traduce il paragrafo in inglese.
+    -->
+    <p class="contatti-desc" data-i18n="contatti_desc">
+      Vuoi collaborare o hai una proposta? Scrivimi pure.
+    </p>
+
+    <!--
+      LINK CONTATTI
+      - Sostituisci tuaemail@email.com con la tua email
+      - Sostituisci i tuousername con i tuoi profili reali
+      - Puoi aggiungere altri link copiando un <a class="contact-link">
+    -->
+    <div class="contatti-links">
+      <a href="mailto:info@simonegiglioli.com" class="contact-link">
+        Email
+      </a>
+      <a href="https://linkedin.com/in/simone-giglioli" target="_blank" class="contact-link">
+        LinkedIn
+      </a>
+      <a href="https://github.com/SimoGgl" target="_blank" class="contact-link">
+        GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
