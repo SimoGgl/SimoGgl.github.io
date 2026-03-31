@@ -90,6 +90,10 @@ langToggle.addEventListener('click', () => {
   currentLang = currentLang === 'it' ? 'en' : 'it';
   langToggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
   applyTranslations(currentLang);
+
+  /* aggiorna il link del CV in base alla lingua attiva */
+  const cvButton = document.querySelector('.cv-button');
+  cvButton.href = currentLang === 'it' ? 'assets/cv-ita.pdf' : 'assets/cv-en.pdf';
 });
 
 /* ================================================
