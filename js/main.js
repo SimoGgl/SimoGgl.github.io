@@ -122,31 +122,3 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-/* ================================================
-   COOKIE BANNER
-   Mostra il banner solo se l'utente non ha ancora
-   espresso una preferenza. Se accetta, Google
-   Analytics rimane attivo. Se rifiuta, viene
-   disabilitato e il banner non riappare.
-   ================================================ */
-
-const cookieBanner = document.getElementById('cookie-banner');
-const cookieChoice = localStorage.getItem('cookie-choice');
-
-if (cookieChoice === 'accepted') {
-  cookieBanner.style.display = 'none';
-} else if (cookieChoice === 'rejected') {
-  cookieBanner.style.display = 'none';
-  window['ga-disable-G-RY75F7K9XG'] = true;
-} 
-
-document.getElementById('cookie-accept').addEventListener('click', () => {
-  localStorage.setItem('cookie-choice', 'accepted');
-  cookieBanner.style.display = 'none';
-});
-
-document.getElementById('cookie-reject').addEventListener('click', () => {
-  localStorage.setItem('cookie-choice', 'rejected');
-  window['ga-disable-G-RY75F7K9XG'] = true;
-  cookieBanner.style.display = 'none';
-});
