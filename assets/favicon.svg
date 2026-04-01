@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#0d1117"/>
-  <rect x="4" y="4" width="120" height="120" rx="22" fill="none" stroke="#58a6ff" stroke-width="2"/>
-  <text x="64" y="76" font-family="Arial, sans-serif" font-size="48" font-weight="600" fill="#e6edf3" text-anchor="middle">SG</text>
-  <rect x="36" y="84" width="56" height="2" rx="1" fill="#58a6ff"/>
+  <defs>
+    <clipPath id="round">
+      <rect width="128" height="128" rx="24"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="128" height="128" fill="#0d1117"/>
+    <rect x="4" y="4" width="120" height="120" rx="22" fill="none" stroke="#58a6ff" stroke-width="2"/>
+    <text x="64" y="76" font-family="Arial, sans-serif" font-size="48" font-weight="600" fill="#e6edf3" text-anchor="middle">SG</text>
+    <rect x="36" y="84" width="56" height="2" rx="1" fill="#58a6ff"/>
+  </g>
 </svg>
