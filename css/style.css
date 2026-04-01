@@ -467,3 +467,103 @@ section {
     left: -25px;
   }
 }
+
+/* ================================================
+   PRIVACY POLICY
+   Stile per la pagina della privacy policy.
+   ================================================ */
+
+.privacy-content h3 {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 32px 0 8px;
+}
+
+.privacy-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.privacy-link {
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+.privacy-link a {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.privacy-link a:hover {
+  color: var(--accent);
+}
+
+/* ================================================
+   COOKIE BANNER
+   Barra fissa in basso che appare al primo accesso.
+   Scompare dopo che l'utente ha fatto la sua scelta
+   e non riappare nelle visite successive grazie
+   al localStorage.
+   ================================================ */
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-top: 0.5px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 999;
+  flex-wrap: wrap;
+}
+
+#cookie-banner p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+#cookie-banner a {
+  color: var(--accent);
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#cookie-accept {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+#cookie-reject {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+#cookie-reject:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
