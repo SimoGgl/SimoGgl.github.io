@@ -468,35 +468,3 @@ section {
   }
 }
 
-/* ================================================
-   PRIVACY POLICY
-   Stile per la pagina della privacy policy.
-   ================================================ */
-
-.privacy-content h3 {
-  font-family: var(--font-mono);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-  margin: 32px 0 8px;
-}
-
-.privacy-content p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
-
-.privacy-link {
-  margin-top: 40px;
-  font-size: 12px;
-}
-
-.privacy-link a {
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
-
-.privacy-link a:hover {
-  color: var(--accent);
-}
