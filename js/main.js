@@ -48,7 +48,7 @@ const translations = {
     exp2_date:        "2023",
     exp2_role:        "IT Support Specialist",
     exp2_desc:        "First-level helpdesk technical support and management of update and modification requests for websites and management software.",
-    exp3_role:        "IFTS — IT Technician for Intelligent Industrial Systems",
+    exp3_role:        "IFTS — Advanced IT Technician Course",
     exp3_date:        "2022 — 2023",
     exp3_desc:        "IFTS program in industrial IT with a grade of 98/100. Skills acquired: networking, programming (Python, PHP, JavaScript), databases, PLC and industrial systems.",
     contatti_titolo:  "Contact",
